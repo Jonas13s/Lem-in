@@ -6,7 +6,7 @@
 #    By: joivanau <joivanau@hive.fi>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/01 14:55:31 by joivanau          #+#    #+#              #
-#    Updated: 2022/05/23 00:06:38 by joivanau         ###   ########.fr        #
+#    Updated: 2022/09/18 23:14:15 by joivanau         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ ft_strmapi.c ft_strncat.c ft_strncmp.c ft_strncpy.c ft_strnequ.c ft_strnew.c ft_
 ft_strsplit.c ft_strstr.c ft_strsub.c ft_strtrim.c ft_tolower.c ft_toupper.c ft_isspace.c ft_lstnew.c\
 ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c ft_strlcpy.c ft_lstsize.c ft_strisnumeric.c\
 ft_strisprintable.c ft_isblank.c ft_strisalpha.c ft_calloc.c ft_strupdate.c get_next_line.c\
-ft_free2d.c ft_str_valid.c hex_conv.c num_count.c
+ft_free2d.c ft_str_valid.c hex_conv.c num_count.c ft_strsplit_len.c ft_strsplit_free.c
 
 SRC = ft_printf.c ft_args.c ft_ischeck.c ft_conv.c ftoa.c assign_values.c
 SRC += print_float.c print_char.c print_string.c print_signedinteger.c

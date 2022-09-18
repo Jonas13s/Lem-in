@@ -6,7 +6,7 @@
 /*   By: joivanau <joivanau@hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 13:46:46 by joivanau          #+#    #+#             */
-/*   Updated: 2022/03/17 02:05:46 by joivanau         ###   ########.fr       */
+/*   Updated: 2022/09/14 00:18:30 by joivanau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 char	*ft_strchr(const char *s, int c)
 {
+	if (s == NULL)
+		return (NULL);
 	while (*s != c)
 	{
 		if (*s == '\0')

@@ -1,38 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ants.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joivanau <joivanau@hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/03 16:32:44 by joivanau          #+#    #+#             */
-/*   Updated: 2022/09/14 00:44:46 by joivanau         ###   ########.fr       */
+/*   Created: 2022/09/18 22:25:08 by joivanau          #+#    #+#             */
+/*   Updated: 2022/09/18 22:39:38 by joivanau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "lem_in.h"
 
-char	*ft_strsub(char const *s, unsigned int start, size_t len)
+void	get_ants(t_lemin *lem, t_line **cur, t_line **lines)
 {
-	char	*str;
-	size_t	i;
-	size_t	x;
-
-	if (!s)
-		return (NULL);
-	if (start > ft_strlen(s))
-		return (NULL);
-	str = (char *) malloc(sizeof(char) * (len + 1));
-	if (!str)
-		return (NULL);
-	x = 0;
-	i = start;
-	while (x < len && s[i] != '\0')
+	if (!(*cur))
+		(*cur) = read_line(lines);
+	if (*cur)
 	{
-		str[x] = s[i];
-		x++;
-		i++;
+		if (ft_strisnumeric((*cur)->content) == 1)
+		{
+			lem->ants = ft_atoi((*cur)->content);
+			(*cur) = NULL;
+			if (lem->ants <= 0)
+				terminate(ENOUGH_ANTS);
+		}
+		else
+			terminate(ANT_NOT_NUM);
 	}
-	str[x] = '\0';
-	return (str);
 }

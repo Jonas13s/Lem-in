@@ -6,7 +6,7 @@
 /*   By: joivanau <joivanau@hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/29 12:38:11 by joivanau          #+#    #+#             */
-/*   Updated: 2022/05/22 23:58:22 by joivanau         ###   ########.fr       */
+/*   Updated: 2022/09/18 23:14:04 by joivanau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,6 +109,8 @@ int		ft_printf(const char *format, ...);
 int		ft_str_valid(char *str, char *symbols);
 int		num_count(long long int i);
 char	*hex_conv(unsigned long long i, char *base);
+int		ft_strsplit_len(char **string);
+void	ft_strsplit_free(char ***string);
 /*	BONUS	*/
 t_list	*ft_lstnew(void const *content, size_t content_size);
 void	ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
