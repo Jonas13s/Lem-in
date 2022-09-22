@@ -6,7 +6,7 @@
 /*   By: joivanau <joivanau@hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 22:48:24 by joivanau          #+#    #+#             */
-/*   Updated: 2022/09/18 23:15:00 by joivanau         ###   ########.fr       */
+/*   Updated: 2022/09/20 23:56:31 by joivanau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ int	check_room(char *str)
 	int		result;
 	char	**string;
 
+	result = 0;
 	string = ft_strsplit(str, ' ');
 	if (!string)
 		terminate(ERR_SPLIT);

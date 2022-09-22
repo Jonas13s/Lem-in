@@ -6,7 +6,7 @@
 /*   By: joivanau <joivanau@hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 23:19:10 by joivanau          #+#    #+#             */
-/*   Updated: 2022/09/18 22:51:31 by joivanau         ###   ########.fr       */
+/*   Updated: 2022/09/20 00:06:51 by joivanau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	main(int args, char **argv)
 
 	lines = NULL;
 	lem = reading(&lines);
-	ft_printf("%d\n", lem->ants);
+	ft_printf("%s %d %d\n", lem->rooms->name, lem->rooms->x, lem->rooms->y);
 	(void)argv;
 	(void)args;
 	(void)lem;
