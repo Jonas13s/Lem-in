@@ -1,6 +1,7 @@
 NAME = lem-in
 
 LEM_IN_SRC = lines.c rooms.c utils.c ants.c check.c
+LEM_IN_SRC += links.c
 LEM_IN_DIR = ./src/
 LEM_IN_OBJ_LIST = $(addprefix $(OBJ_DIR), $(LEM_IN_SRC:.c=.o))
 

@@ -6,7 +6,7 @@
 /*   By: joivanau <joivanau@hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 23:16:40 by joivanau          #+#    #+#             */
-/*   Updated: 2022/09/18 23:10:46 by joivanau         ###   ########.fr       */
+/*   Updated: 2022/09/22 22:24:28 by joivanau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,9 @@ t_line	*read_line(t_line **lines);
 
 void	get_ants(t_lemin *lem, t_line **cur, t_line **lines);
 void	get_rooms(t_lemin *lem, t_line **cur, t_line **lines);
+void	get_links(t_lemin *lem, t_line **cur, t_line **lines);
 int		check_command(char *str);
 int		check_comment(char *str);
 int		check_room(char *str);
+t_room	*find_room(t_lemin *lem, char *str);
 #endif
