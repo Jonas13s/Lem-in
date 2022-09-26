@@ -6,7 +6,7 @@
 /*   By: joivanau <joivanau@hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 22:19:51 by joivanau          #+#    #+#             */
-/*   Updated: 2022/09/22 22:43:41 by joivanau         ###   ########.fr       */
+/*   Updated: 2022/09/25 00:24:56 by joivanau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # define ERR_LINE		"ERROR: Line doesn't get initialized"
 # define READ_ERROR		"ERROR: Line doesn't get read"
+# define ERR_START_END	"ERROR: Input doesn't have start or end room"
 
 # define ERR_LEM		"ERROR: Lem struct doesn't get initilized"
 # define ENOUGH_ANTS	"ERROR: Not enough ants"
@@ -30,4 +31,7 @@
 # define ERR_LINK		"ERROR: Link doesn't get created"
 # define ERR_LINK_I		"ERROR: Link doesn't get initialized"
 # define ERR_LINK_DUP	"ERROR: Link name duplicates"
+# define ERR_NO_LINK	"ERROR: Zero links"
+
+# define ERR_BFS_ALLOC	"ERROR: BFS couldn't allocate memory"
 #endif

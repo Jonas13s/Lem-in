@@ -6,7 +6,7 @@
 /*   By: joivanau <joivanau@hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 23:16:40 by joivanau          #+#    #+#             */
-/*   Updated: 2022/09/22 22:24:28 by joivanau         ###   ########.fr       */
+/*   Updated: 2022/09/26 23:20:58 by joivanau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,12 @@ typedef struct s_room
 	struct s_room	*next;
 }					t_room;
 
+typedef struct s_queue
+{
+	t_room			*room;
+	struct s_queue	*next;
+}					t_queue;
+
 typedef struct s_link
 {
 	t_room			*start;
@@ -56,6 +62,7 @@ typedef struct s_lemin
 	int			start_ants;
 	int			end_ants;
 	int			ants;
+	int			level;
 	t_room		*rooms;
 	t_room		*end;
 	t_room		*start;
@@ -73,4 +80,7 @@ int		check_command(char *str);
 int		check_comment(char *str);
 int		check_room(char *str);
 t_room	*find_room(t_lemin *lem, char *str);
+void	bfs(t_lemin *lem);
+void	bad_links(t_lemin *lem);
+void	align_link(t_lemin *lem);
 #endif
