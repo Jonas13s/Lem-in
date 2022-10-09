@@ -6,12 +6,13 @@
 /*   By: joivanau <joivanau@hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 23:16:40 by joivanau          #+#    #+#             */
-/*   Updated: 2022/09/26 23:20:58 by joivanau         ###   ########.fr       */
+/*   Updated: 2022/10/09 19:55:03 by joivanau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LEM_IN_H
 # define LEM_IN_H
+# define FT_INT_MAX 2147483647
 # include "libft.h"
 # include <errno.h>
 # include "errors.h"
@@ -57,6 +58,20 @@ typedef struct s_line
 	struct s_line	*next;
 }					t_line;
 
+typedef struct s_path
+{
+	t_link			*head;
+	int				length;
+	struct s_path	*next;
+}					t_path;
+
+typedef struct s_location
+{
+	int					ant_number;
+	t_room				*room;
+	struct s_location	*next;
+}						t_location;
+
 typedef struct s_lemin
 {
 	int			start_ants;
@@ -67,6 +82,8 @@ typedef struct s_lemin
 	t_room		*end;
 	t_room		*start;
 	t_link		*links;
+	t_location	*locations;
+	t_path		*paths;
 }				t_lemin;
 
 void	terminate(char	*str);
@@ -80,7 +97,16 @@ int		check_command(char *str);
 int		check_comment(char *str);
 int		check_room(char *str);
 t_room	*find_room(t_lemin *lem, char *str);
+t_link	*find_link(t_lemin *lem, t_room *start, t_room *end);
 void	bfs(t_lemin *lem);
 void	bad_links(t_lemin *lem);
 void	align_link(t_lemin *lem);
+void	count_inout_link(t_lemin *lem);
+void	remove_link(t_lemin *lem, t_link *link);
+t_link	*del_link(t_lemin *lem, t_link *link);
+void	del_bad_links(t_lemin *lem);
+void	delete_inputs(t_lemin *lem);
+void	delete_outputs(t_lemin *lem);
+void	form_path(t_lemin *lem);
+void	do_turns(t_lemin *lem);
 #endif

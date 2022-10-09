@@ -6,7 +6,7 @@
 /*   By: joivanau <joivanau@hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 00:20:36 by joivanau          #+#    #+#             */
-/*   Updated: 2022/09/26 22:41:44 by joivanau         ###   ########.fr       */
+/*   Updated: 2022/10/04 22:56:44 by joivanau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,7 +96,7 @@ void	bfs(t_lemin *lem)
 			lem->level = cur->room->level;
 		}
 		else
-			lem->end->level = 123123;
+			lem->end->level = FT_INT_MAX;
 		free(cur);
 	}
 }

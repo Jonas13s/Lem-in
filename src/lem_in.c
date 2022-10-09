@@ -6,13 +6,14 @@
 /*   By: joivanau <joivanau@hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 23:19:10 by joivanau          #+#    #+#             */
-/*   Updated: 2022/09/26 23:23:20 by joivanau         ###   ########.fr       */
+/*   Updated: 2022/10/09 20:14:24 by joivanau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lem_in.h"
 
 void	print_links(t_lemin *lem);
+void	print_names(t_lemin *lem);
 t_lemin	*reading(t_line **lines);
 
 t_lemin	*int_lem(void)
@@ -30,6 +31,8 @@ t_lemin	*int_lem(void)
 	cur->end = NULL;
 	cur->start = NULL;
 	cur->links = NULL;
+	cur->locations = NULL;
+	cur->paths = NULL;
 	return (cur);
 }
 
@@ -42,10 +45,16 @@ int	main(int args, char **argv)
 	lem = reading(&lines);
 	bad_links(lem);
 	align_link(lem);
-	print_links(lem);
+	count_inout_link(lem);
+	del_bad_links(lem);
+	delete_inputs(lem);
+	delete_outputs(lem);
+	form_path(lem);
+	do_turns(lem);
 	(void)argv;
 	(void)args;
 	(void)lem;
+	sleep(3);
 	return (0);
 }
 
@@ -57,6 +66,7 @@ t_lemin	*reading(t_line **lines)
 	cur = NULL;
 	lem = int_lem();
 	get_ants(lem, &cur, lines);
+	ft_printf("%d\n", lem->start_ants);
 	get_rooms(lem, &cur, lines);
 	if (!lem->start || !lem->end)
 		terminate(ERR_START_END);
@@ -74,7 +84,7 @@ void	print_names(t_lemin *lem)
 	cur = lem->rooms;
 	while (cur)
 	{
-		ft_printf("%s", cur->name);
+		ft_printf("%s %d %d\n", cur->name, cur->input, cur->output);
 		cur = cur->next;
 	}
 }

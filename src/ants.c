@@ -6,7 +6,7 @@
 /*   By: joivanau <joivanau@hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 22:25:08 by joivanau          #+#    #+#             */
-/*   Updated: 2022/09/18 22:39:38 by joivanau         ###   ########.fr       */
+/*   Updated: 2022/10/09 20:08:00 by joivanau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ void	get_ants(t_lemin *lem, t_line **cur, t_line **lines)
 	{
 		if (ft_strisnumeric((*cur)->content) == 1)
 		{
-			lem->ants = ft_atoi((*cur)->content);
+			lem->start_ants = ft_atoi((*cur)->content);
 			(*cur) = NULL;
-			if (lem->ants <= 0)
+			if (lem->start_ants <= 0)
 				terminate(ENOUGH_ANTS);
 		}
 		else

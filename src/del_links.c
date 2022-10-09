@@ -6,7 +6,7 @@
 /*   By: joivanau <joivanau@hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 22:34:27 by joivanau          #+#    #+#             */
-/*   Updated: 2022/09/26 22:41:36 by joivanau         ###   ########.fr       */
+/*   Updated: 2022/10/04 23:23:52 by joivanau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,26 @@ void	remove_link(t_lemin *lem, t_link *link)
 	if (link->start->output > 0)
 		link->start->output--;
 	free(link);
+}
+
+t_link	*del_link(t_lemin *lem, t_link *link)
+{
+	t_link	*cur;
+	t_link	*prev;
+
+	prev = NULL;
+	cur = lem->links;
+	while (cur && cur != link)
+	{
+		prev = cur;
+		cur = cur->next;
+	}
+	if (!prev && cur)
+		lem->links = cur->next;
+	else if (cur)
+		prev->next = cur->next;
+	link->next = NULL;
+	return (link);
 }
 
 void	bad_links(t_lemin *lem)
