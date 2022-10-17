@@ -6,7 +6,7 @@
 /*   By: joivanau <joivanau@hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 01:23:45 by joivanau          #+#    #+#             */
-/*   Updated: 2022/10/04 01:40:31 by joivanau         ###   ########.fr       */
+/*   Updated: 2022/10/17 11:39:40 by joivanau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ void	delete_inputs(t_lemin *lem)
 	t_room	*cur;
 
 	level = 1;
-	while (level < lem->level)
+	while (level <= lem->level)
 	{
 		cur = lem->rooms;
 		while (cur)

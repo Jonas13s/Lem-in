@@ -6,7 +6,7 @@
 /*   By: joivanau <joivanau@hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 22:59:16 by joivanau          #+#    #+#             */
-/*   Updated: 2022/10/04 23:29:55 by joivanau         ###   ########.fr       */
+/*   Updated: 2022/10/17 11:40:31 by joivanau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ void	delete_outputs(t_lemin *lem)
 		while (cur)
 		{
 			if (cur->level == level && cur->output > 1)
-				delete_output(lem, cur);
+				delete_output(lem, cur);	
 			cur = cur->next;
 		}
 		level--;

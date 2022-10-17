@@ -6,7 +6,7 @@
 /*   By: joivanau <joivanau@hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 22:17:01 by joivanau          #+#    #+#             */
-/*   Updated: 2022/10/09 20:16:58 by joivanau         ###   ########.fr       */
+/*   Updated: 2022/10/17 10:50:24 by joivanau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,5 @@ void	terminate(char	*str)
 		ft_putendl_fd(str, 2);
 	else
 		perror(str);
-	sleep(3);
 	exit(1);
 }

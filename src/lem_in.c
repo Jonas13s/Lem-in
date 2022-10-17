@@ -6,7 +6,7 @@
 /*   By: joivanau <joivanau@hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 23:19:10 by joivanau          #+#    #+#             */
-/*   Updated: 2022/10/09 20:14:24 by joivanau         ###   ########.fr       */
+/*   Updated: 2022/10/17 11:40:58 by joivanau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,11 +50,11 @@ int	main(int args, char **argv)
 	delete_inputs(lem);
 	delete_outputs(lem);
 	form_path(lem);
+	print_map(lines);
 	do_turns(lem);
 	(void)argv;
 	(void)args;
 	(void)lem;
-	sleep(3);
 	return (0);
 }
 

@@ -6,7 +6,7 @@
 /*   By: joivanau <joivanau@hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 23:35:28 by joivanau          #+#    #+#             */
-/*   Updated: 2022/10/09 20:10:12 by joivanau         ###   ########.fr       */
+/*   Updated: 2022/10/17 11:40:46 by joivanau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -150,7 +150,7 @@ void	print_location(t_lemin *lem)
 
 void	do_turns(t_lemin *lem)
 {
-	(void)move_ants_along(lem);
+	move_ants_along(lem);
 	while (lem->start_ants || lem->ants != lem->end_ants)
 	{
 		move_ants_along(lem);

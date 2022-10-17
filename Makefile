@@ -2,7 +2,7 @@ NAME = lem-in
 
 LEM_IN_SRC = lines.c rooms.c utils.c ants.c check.c
 LEM_IN_SRC += links.c bfs.c del_links.c align_link.c
-LEM_IN_SRC += delete_input.c delete_output.c path.c turns.c
+LEM_IN_SRC += delete_input.c delete_output.c path.c turns.c print.c
 LEM_IN_DIR = ./src/
 LEM_IN_OBJ_LIST = $(addprefix $(OBJ_DIR), $(LEM_IN_SRC:.c=.o))
 
@@ -22,7 +22,7 @@ INCLUDES = -I includes/ -I libft/
 
 LINK = -lft -L libft/
 
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror -ggdb 
 
 CC = gcc
 

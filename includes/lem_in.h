@@ -6,7 +6,7 @@
 /*   By: joivanau <joivanau@hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 23:16:40 by joivanau          #+#    #+#             */
-/*   Updated: 2022/10/09 19:55:03 by joivanau         ###   ########.fr       */
+/*   Updated: 2022/10/17 11:10:30 by joivanau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,4 +109,6 @@ void	delete_inputs(t_lemin *lem);
 void	delete_outputs(t_lemin *lem);
 void	form_path(t_lemin *lem);
 void	do_turns(t_lemin *lem);
+void	print_map(t_line *lines);
+void	print_links(t_lemin *lem);
 #endif
